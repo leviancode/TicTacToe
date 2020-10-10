@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity {
     // 1: yellow, 2:red, 0: empty
     private int mActivePlayer = 1;
     private int n = 3;
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game);
 
         mWinnerTextView = findViewById(R.id.gameResultTextView);
         mPlayAgainButton = findViewById(R.id.playAgainButton);
@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
 
             mStepsLeft--;
 
-            if (mStepsLeft == 0) {
-                gameOver(false);
-            } else if (isWon()){
+           if (isWon()){
                 gameOver(true);
-            }
+            } else if (mStepsLeft == 0) {
+               gameOver(false);
+           }
             dropIn(counter);
         }
     }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".GameActivity">
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -122,8 +122,6 @@
         android:layout_marginTop="31dp"
         android:layout_marginBottom="19dp"
         android:fontFamily="sans-serif-medium"
-        android:shadowColor="@android:color/background_dark"
-        android:shadowRadius="1"
         android:textAlignment="center"
         android:textColor="#81D4FA"
 
