@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Tic-Tac-Toe</string>
-    <string name="congratulation">%1$s win!</string>
+    <string name="congratulation">%1$s WIN!</string>
     <string name="playAgainButton">Play again</string>
-    <string name="nobodyWon">Nobody won :(</string>
+    <string name="nobodyWon">NOBODY WON :(</string>
+    <string name="yellow">YELLOW</string>
+    <string name="red">RED</string>
 </resources>

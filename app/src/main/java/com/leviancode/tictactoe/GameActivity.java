@@ -117,11 +117,16 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void gameOver(boolean hasWinner) {
-        String resultText;
+        String resultText = getString(R.string.nobodyWon);
+        mWinnerTextView.setTextColor(getColor(R.color.colorPrimaryDark));
         if (hasWinner) {
-            resultText = getString(R.string.congratulation, (mActivePlayer == 1 ? "Yellow" : "Red"));
-        } else{
-            resultText = getString(R.string.nobodyWon);
+            if (mActivePlayer == 1){
+                mWinnerTextView.setTextColor(getColor(R.color.yellow));
+                resultText = getString(R.string.congratulation, getString(R.string.yellow));
+            } else {
+                mWinnerTextView.setTextColor(getColor(R.color.red));
+                resultText = getString(R.string.congratulation, getString(R.string.red));
+            }
         }
         mWinnerTextView.setText(resultText);
         mPlayAgainButton.setVisibility(View.VISIBLE);
